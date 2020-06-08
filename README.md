@@ -1,2 +1,2 @@
 # ExcelScript
-Historicaly record the data into google sheets cells
+Historicaly record the data into Google Sheets from one sheet to another
