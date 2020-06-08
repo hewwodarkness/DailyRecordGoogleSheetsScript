@@ -1,4 +1,4 @@
-function createTimeDrivenTriggers() {
+/*function createTimeDrivenTriggers() {
   // Trigger every 6 hours.
   ScriptApp.newTrigger('myFunction')
       .timeBased()
@@ -28,4 +28,14 @@ function moveData() {
   
   // Delete the data from the daily sheet
   dailySheet.getRange(dailySheetRange).deleteCells(SpreadsheetApp.Dimension.ROWS);
+}*/
+
+function dailyLog() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sourceSheet = ss.getSheetByName('Daily');
+  var logSheet = ss.getSheetByName('Archive');
+  var lastRow = logSheet.getLastRow();
+  //logSheet.getRange(lastRow + 1, 1).setValue(new Date());  // insert timestamp
+  var range = sourceSheet.getDataRange();
+  range.copyTo(logSheet.getRange(lastRow + 2, 1), {contentsOnly: true});
 }
