@@ -37,5 +37,5 @@ function dailyLog() {
   var lastRow = logSheet.getLastRow();
   //logSheet.getRange(lastRow + 1, 1).setValue(new Date());  // insert timestamp
   var range = sourceSheet.getDataRange();
-  range.copyTo(logSheet.getRange(lastRow + 2, 1), {contentsOnly: true});
+  range.copyTo(logSheet.getRange(lastRow + 1, 1), {contentsOnly: true});
 }
