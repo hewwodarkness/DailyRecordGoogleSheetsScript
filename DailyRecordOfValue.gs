@@ -38,4 +38,29 @@ function dailyLog() {
   //logSheet.getRange(lastRow + 1, 1).setValue(new Date());  // insert timestamp
   var range = sourceSheet.getDataRange();
   range.copyTo(logSheet.getRange(lastRow + 1, 1), {contentsOnly: true});
+
+  var sourceSheet1 = ss.getSheetByName('DailyS');
+  var logSheet1 = ss.getSheetByName('ArchiveS');
+  var lastRow1 = logSheet1.getLastRow();
+  //logSheet.getRange(lastRow + 1, 1).setValue(new Date());  // insert timestamp
+  var range1 = sourceSheet1.getDataRange();
+  range1.copyTo(logSheet1.getRange(lastRow1 + 1, 1), {contentsOnly: true});
+
+var sourceSheet2 = ss.getSheetByName('DailyA');
+  var logSheet2 = ss.getSheetByName('ArchiveA');
+  var lastRow2 = logSheet2.getLastRow();
+  //logSheet.getRange(lastRow + 1, 1).setValue(new Date());  // insert timestamp
+  var range2 = sourceSheet2.getDataRange();
+  range2.copyTo(logSheet2.getRange(lastRow2 + 1, 1), {contentsOnly: true});
+
+var sourceSheet3 = ss.getSheetByName('DailyScore');
+  var logSheet3 = ss.getSheetByName('ArchiveScore');
+  var lastRow3 = logSheet3.getLastRow();
+  //logSheet.getRange(lastRow + 1, 1).setValue(new Date());  // insert timestamp
+  var range3 = sourceSheet3.getDataRange();
+  range3.copyTo(logSheet3.getRange(lastRow3 + 1, 1), {contentsOnly: true});
 }
+
+
+
+
